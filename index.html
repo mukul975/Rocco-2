@@ -531,7 +531,7 @@
                 </div>
             </div>
             <div class="cite-strip text-center mt-4">
-                <p>&copy; 2024 Rocco und Seine Brüder. Alle Rechte vorbehalten. | Erstellt von Mahipal</p>
+                <p>&copy; <span id="currentYear"></span> Rocco und Seine Brüder. Alle Rechte vorbehalten. | Erstellt von Mahipal</p>
             </div>
         </footer>
         <!-- footer close -->
@@ -560,7 +560,9 @@
     <script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
     <script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
     <script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
     <script>
         jQuery(document).ready(function () {
             // revolution slider
