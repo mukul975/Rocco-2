@@ -126,17 +126,6 @@
                                         
                                     </select>
                                 </div>
-
-                                <div class="col-lg-4 mb10">
-                                    <h4>Wie viele Gäste?</h4>
-                                    <select name="guests" id="guests" value="" class="form-control">
-                                      <option value="1-4">1 - 4</option>
-                                      <option value="5-8">5 - 10</option>
-                                      <option value="5-8">11 - 20</option>
-                                      <option value="20+">Mehr als 20</option>
-                                    </select>                                        
-                                </div>
-
                                 <div class="spacer-half"></div>
 
                                 <h4>Geben Sie Ihre Daten ein</h4>
@@ -150,7 +139,10 @@
                                     <div>
                                         <input type='email' name='Email' id='email' class="form-control" placeholder="Ihre E-Mail" required>
                                     </div>
-
+                                    <div id='phone_error' class='error'>Wie viele Gäste?</div>
+                                    <div>
+                                        <input type='text' name='gaste' id='phone' class="form-control" placeholder="Wie viele Gäste?" required>
+                                    </div>
                                     <div id='phone_error' class='error'>Bitte geben Sie Ihre Telefonnummer ein.</div>
                                     <div>
                                         <input type='text' name='phone' id='phone' class="form-control" placeholder="Ihre Telefonnummer" required>
