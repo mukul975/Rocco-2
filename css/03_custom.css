@@ -33,7 +33,7 @@ h2{
     position: relative;
     width: 300px; /* Adjust width based on your content */
     height: 150px; /* Adjust height based on your content */
-    margin: 0px;
+    margin: 0px; /* Adjust margin to divide the strip */
     color: white; /* White text inside */
     text-align: center;
     padding: 20px;
