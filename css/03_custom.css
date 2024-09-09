@@ -33,13 +33,13 @@ h2{
     position: relative;
     width: 300px; /* Adjust width based on your content */
     height: 150px; /* Adjust height based on your content */
-    margin: 20px;
+    margin: 0px;
     color: white; /* White text inside */
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     border: 5px solid rgb(255, 255, 255); /* Main white border */
-    border-radius: 5px; /* Slight rounding of corners */
+    border-radius: px; /* Slight rounding of corners */
 }
 
 
