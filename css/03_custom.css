@@ -29,7 +29,59 @@ h2{
     letter-spacing: -.015em;
     margin-bottom: 20px;
 }
+.menu-item {
+    position: relative;
+    width: 300px; /* Adjust width based on your content */
+    height: 150px; /* Adjust height based on your content */
+    margin: 20px;
+    color: white; /* White text inside */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid rgb(255, 255, 255); /* Main white border */
+    border-radius: 5px; /* Slight rounding of corners */
+}
 
+
+/* Pseudo-element for left and right perforations */
+.menu-item::before, 
+.menu-item::after {
+    content: '';
+    position: absolute;
+    width: 20px; /* Adjust this based on desired box width */
+    height: 100%;
+    background: repeating-linear-gradient(
+        #000000 0,
+        #707070 10px,
+        white 10px,
+        white 20px
+    );
+}
+
+.menu-item::before {
+    left: 270px;
+    top: 0px; /* Adjust distance from left */
+}
+.menu-item::after {
+    bottom: 0px; /* Adjust distance from bottom */
+    left: 0;
+}
+/* New pseudo-elements for vertical lines inside the border */
+.menu-item .line {
+    position: absolute;
+    width: 5px; /* Thickness of the lines */
+    height: 100%; /* Leave space for padding */
+    background-color: white;
+    top: 0px; /* Adjust to align with padding */
+}
+
+.menu-item .line-left {
+    left: 20px; /* Position of the left line */
+}
+
+.menu-item .line-right {
+    right: 20px; /* Position of the right line */
+}
 
 .form-control,
 #contact_form input[type=text],
