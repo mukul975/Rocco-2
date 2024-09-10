@@ -26,62 +26,82 @@
 
 h2{
     font-size: 48px;
+    color: #707070 ;
     letter-spacing: -.015em;
     margin-bottom: 20px;
 }
 .menu-item {
     position: relative;
-    width: 300px; /* Adjust width based on your content */
+    width: 100%; /* Make the width flexible based on the container */
+    max-width: 600px; /* Optional: Limit max width */
     height: 150px; /* Adjust height based on your content */
-    margin: 0px; /* Adjust margin to divide the strip */
+    margin: 0px auto; /* Center the box horizontally */
     color: white; /* White text inside */
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     border: 5px solid rgb(255, 255, 255); /* Main white border */
-    border-radius: px; /* Slight rounding of corners */
+    border-radius:0px; /* Slight rounding of corners */
+    
+   
 }
 
-
-/* Pseudo-element for left and right perforations */
+/* Pseudo-elements for left and right perforations */
 .menu-item::before, 
 .menu-item::after {
     content: '';
     position: absolute;
-    width: 20px; /* Adjust this based on desired box width */
-    height: 100%;
+    width: 20px; /* Perforation width */
+    height: 100%; /* Full height of the box */
     background: repeating-linear-gradient(
         #000000 0,
         #707070 10px,
         white 10px,
         white 20px
     );
+    
 }
 
 .menu-item::before {
-    left: 270px;
-    top: 0px; /* Adjust distance from left */
+    left: -2px; /* Position just outside the left border */
+    top: 0;
 }
+
 .menu-item::after {
-    bottom: 0px; /* Adjust distance from bottom */
-    left: 0;
+    right: -2px; /* Position just outside the right border */
+    top: 0;
 }
-/* New pseudo-elements for vertical lines inside the border */
+
+/* Pseudo-elements for vertical lines inside the border */
 .menu-item .line {
     position: absolute;
     width: 5px; /* Thickness of the lines */
-    height: 100%; /* Leave space for padding */
+    height: 100% ; /* Leave space for padding */
     background-color: white;
-    top: 0px; /* Adjust to align with padding */
+    top: 0px; /* Align with padding */
 }
 
 .menu-item .line-left {
-    left: 20px; /* Position of the left line */
+    left: 15px; /* Position of the left line */
 }
 
 .menu-item .line-right {
-    right: 20px; /* Position of the right line */
+    right: 15px; /* Position of the right line */
 }
+
+/* Content styling */
+.menu-item .content {
+    z-index: 1;
+    position: relative;
+}
+.menu-item:hover  {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    border-color: #ffffff; /* Change border color on hover */
+}
+
 
 .form-control,
 #contact_form input[type=text],
